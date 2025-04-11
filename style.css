@@ -281,6 +281,7 @@ input[type="reset"]:disabled,
 .title-bar-controls button[aria-label="Minimize"],
 .title-bar-controls button[aria-label].minimize {
   background-image: svg-load("./icon/minimize.svg");
+  background-size: 0.7499999999999997em;
   background-repeat: no-repeat;
   background-position: bottom 0.25em left 0.3333333333333em;
 }
@@ -288,6 +289,7 @@ input[type="reset"]:disabled,
 .title-bar-controls button[aria-label="Maximize"],
 .title-bar-controls button[aria-label].maximize {
   background-image: svg-load("./icon/maximize.svg");
+  background-size: 0.7499999999999997em;
   background-repeat: no-repeat;
   background-position: top 0.1666666666666667em left 0.25em;
 }
@@ -295,6 +297,7 @@ input[type="reset"]:disabled,
 .title-bar-controls button[aria-label="Maximize"]:disabled,
 .title-bar-controls button[aria-label].maximize:disabled {
   background-image: svg-load("./icon/maximize-disabled.svg");
+  background-size: 0.7499999999999997em;
   background-repeat: no-repeat;
   background-position: top 0.1666666666666667em left 0.25em;
 }
@@ -302,6 +305,7 @@ input[type="reset"]:disabled,
 .title-bar-controls button[aria-label="Restore"],
 .title-bar-controls button[aria-label].restore {
   background-image: svg-load("./icon/restore.svg");
+  background-size: 0.7499999999999997em;
   background-repeat: no-repeat;
   background-position: top 0.1666666666666667em left 0.25em;
 }
@@ -309,14 +313,15 @@ input[type="reset"]:disabled,
 .title-bar-controls button[aria-label="Help"],
 .title-bar-controls button[aria-label].help {
   background-image: svg-load("./icon/help.svg");
+  background-size: 0.7499999999999997em;
   background-repeat: no-repeat;
   background-position: top 0.1666666666666667em left 0.4166666666666667em;
 }
 
 .title-bar-controls button[aria-label="Close"],
 .title-bar-controls button[aria-label].close {
-  margin-left: 0.1666666666666667em;
   background-image: svg-load("./icon/close.svg");
+  background-size: 0.7499999999999997em;
   background-repeat: no-repeat;
   background-position: top 0.25em left 0.3333333333333em;
 }
@@ -409,10 +414,12 @@ input[type="radio"] + label::before {
   height: var(--radio-width);
   margin-right: var(--radio-label-spacing);
   background: svg-load("./icon/radio-border.svg");
+  background-size: contain;
 }
 
 input[type="radio"]:active + label::before {
   background: svg-load("./icon/radio-border-disabled.svg");
+  background-size: contain;
 }
 
 input[type="radio"]:checked + label::after {
@@ -424,6 +431,7 @@ input[type="radio"]:checked + label::after {
   left: var(--radio-dot-left);
   position: absolute;
   background: svg-load("./icon/radio-dot.svg");
+  background-size: contain;
 }
 
 input[type="radio"]:focus + label,
@@ -433,10 +441,12 @@ input[type="checkbox"]:focus + label {
 
 input[type="radio"][disabled] + label::before {
   background: svg-load("./icon/radio-border-disabled.svg");
+  background-size: contain;
 }
 
 input[type="radio"][disabled]:checked + label::after {
   background: svg-load("./icon/radio-dot-disabled.svg");
+  background-size: contain;
 }
 
 input[type="checkbox"] + label {
@@ -470,6 +480,7 @@ input[type="checkbox"]:checked + label::after {
     -1 * (var(--checkbox-total-width-precalc)) + var(--checkmark-left)
   );
   background: svg-load("./icon/checkmark.svg");
+  background-size: contain;
 }
 
 input[type="checkbox"][disabled] + label::before {
@@ -478,6 +489,7 @@ input[type="checkbox"][disabled] + label::before {
 
 input[type="checkbox"][disabled]:checked + label::after {
   background: svg-load("./icon/checkmark-disabled.svg");
+  background-size: contain;
 }
 
 input[type="text"],
@@ -507,11 +519,11 @@ input[type="url"],
 input[type="tel"],
 input[type="search"],
 select:not([multiple]) {
-  height: 20.0833333333333333em;
+  height: 1.7499999999999993em;
 }
 input[type="number"] {
   /* need this 1 pixel to fit the spinner controls in box */
-  height: 20.1666666666666667em;
+  height: 1.8333333333333326em;
 }
 /* clears the ‘X’ from Internet Explorer */
 input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
@@ -588,8 +600,9 @@ input[type="range"]:focus {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 1.75em;
-  width: 0.666666666666667em;
+  width: 0.9em;
   background: svg-load("./icon/indicator-horizontal.svg");
+  background-size: cover;
   transform: translateY(-0.666666666666667em);
   box-shadow: none;
   border: none;
@@ -597,20 +610,23 @@ input[type="range"]::-webkit-slider-thumb {
 
 input[type="range"].has-box-indicator::-webkit-slider-thumb {
   background: svg-load("./icon/indicator-rectangle-horizontal.svg");
+  background-size: contain;
   transform: translateY(-0.8333333333333333em);
 }
 
 input[type="range"]::-moz-range-thumb {
   height: 1.75em;
-  width: 0.666666666666667em;
+  width: 0.9em;
   border: 0;
   border-radius: 0;
   background: svg-load("./icon/indicator-horizontal.svg");
+  background-size: cover;
   transform: translateY(0.1666666666666667em);
 }
 
 input[type="range"].has-box-indicator::-moz-range-thumb {
   background: svg-load("./icon/indicator-rectangle-horizontal.svg");
+  background-size: contain;
   transform: translateY(0em);
 }
 
@@ -798,6 +814,7 @@ ul[role=listbox][aria-multiselectable]:focus > li[role=option][aria-current=true
   width: 1.3333333333333328em;
   height: 1.416666666666666em;
   background-image: svg-load("./icon/button-down.svg");
+  background-size: contain;
   background-repeat: no-repeat;
   min-width: unset;
   min-height: unset;
